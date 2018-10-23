@@ -7,3 +7,5 @@ const classicAddresses = keypairs.map( keypair =>{
 })
 
 console.log(classicAddresses);
+module.exports = classicAddresses;
+
