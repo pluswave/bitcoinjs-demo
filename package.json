@@ -1,0 +1,17 @@
+{
+  "name": "bitcoinjs_demo",
+  "version": "0.1.0",
+  "description": "bitcoinjs demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pluswave <pluswave@xiaofuxing.name>",
+  "license": "MIT",
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "bitcoinjs-lib": "^4.0.1",
+    "hdkey": "^1.1.0",
+    "superagent": "^4.0.0-beta.5"
+  }
+}
