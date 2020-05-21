@@ -11,7 +11,7 @@
   "dependencies": {
     "bchaddrjs": "^0.2.2",
     "bip39": "^2.5.0",
-    "bitcoinjs-lib": "git+https://github.com/KeyboxWallet/bitcoinjs-lib.git#7ea0060417dd2263fbe46b838ee8cd38aa9bc3ed",
+    "bitcoinjs-lib": "^5.1.7",
     "hdkey": "^1.1.0",
     "superagent": "^4.0.0-beta.5"
   }
