@@ -47,6 +47,17 @@ psbt.updateInput(0, {
   );
 console.log("update one input for bip32Derivation", psbt.toBase64());
 
+psbt.updateOutput(0, {
+    bip32Derivation:[{
+        masterFingerprint: utils.getMasterNodeFingerprint(mnemonic),
+        pubkey: keypairs[1].publicKey,
+        path: keypairs[1].bip32Path,
+      }]}
+);
+
+console.log("update one output for bip32Derivation", psbt.toBase64());
+
+
 psbt.signInput(0, keypairs[0]);
 console.log("sign one input:", psbt.toBase64());
 psbt.finalizeAllInputs();
