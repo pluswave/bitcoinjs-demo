@@ -30,21 +30,7 @@ function getBitCoinECPair(mnemonic, options)
     });
 }
 
-function getMasterNodeIdentifier(mnemonic)
-{
-    let masterNode = getMasterNode(mnemonic);
-    return masterNode.identifier;
-}
-
-function getMasterNodeFingerprint(mnemonic)
-{
-    let masterNode = getMasterNode(mnemonic);
-    let f = masterNode.identifier.slice(0,4); // same ase fingerprint 
-    return masterNode.fingerprint;
-}
 
 module.exports = {
-    getBitCoinECPair,
-    getMasterNodeIdentifier,
-    getMasterNodeFingerprint
+    getBitCoinECPair
 }

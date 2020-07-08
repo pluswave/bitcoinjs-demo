@@ -1,6 +1,6 @@
 'use strict';
-const utils = require('./utils');
-const mnemonic = require('./mnemonic').mnemonic;
+const utils = require('../common/utils');
+const mnemonic = require('../common/mnemonic').mnemonic;
 const btcjs = require('bitcoinjs-lib');
 
 var keypairs = [0,1,2].map( x => {

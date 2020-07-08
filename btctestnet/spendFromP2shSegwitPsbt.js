@@ -3,8 +3,8 @@
 const keypairs = require('./keypairs');
 const btcjs = require('bitcoinjs-lib');
 const addresses = require('./getP2shSegwitAddress');
-const mnemonic = require('./mnemonic').mnemonic;
-const utils = require('./utils');
+const fingerPrint = require('../common/mnemonic').masterNodeFingerPrint;
+
 
 const utxo = {
     txid : '9f23f3f5af19109aa5db191f4c2c393e188e7c9296292bf2f16fe3192f31d0da',
@@ -48,7 +48,7 @@ console.log("update one input:", psbt.toBase64());
 
 psbt.updateInput(0, {
     bip32Derivation:[{
-    masterFingerprint: utils.getMasterNodeFingerprint(mnemonic),
+    masterFingerprint: fingerPrint,
     pubkey: keypairs[0].publicKey,
     path: keypairs[0].bip32Path,
   }]}

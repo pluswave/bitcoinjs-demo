@@ -12,6 +12,7 @@
     "bchaddrjs": "^0.2.2",
     "bip39": "^2.5.0",
     "bitcoinjs-lib": "^5.1.7",
+    "coininfo": "^5.1.0",
     "superagent": "^4.0.0-beta.5"
   }
 }
