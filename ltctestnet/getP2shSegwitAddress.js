@@ -9,12 +9,16 @@ const basePath = `m/49'/` + network.versions.bip44 + `'/0'/0/`;
 network = network.toBitcoinJS();
 console.log(network);
 
+const keys = keypairs(basePath, network);
 
-const addresses = keypairs(basePath, network).map( keypair =>{
-    const pay1 = btcjs.payments.p2wpkh({pubkey: keypair.publicKey, network: btcjs.networks.testnet});
-    const pay2 = btcjs.payments.p2sh({redeem:pay1, network: btcjs.networks.testnet})
+const addresses = keys.map( keypair =>{
+    const pay1 = btcjs.payments.p2wpkh({pubkey: keypair.publicKey, network});
+    const pay2 = btcjs.payments.p2sh({redeem:pay1, network})
     return pay2.address;
 })
 
 console.log(addresses);
-module.exports = addresses;
+module.exports = {
+    keypairs: keys,
+    addresses
+}
