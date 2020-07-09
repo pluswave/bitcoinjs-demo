@@ -1,12 +1,9 @@
 'use strict'
 const keypairs = require('./../common/keypairs');
 const btcjs = require('bitcoinjs-lib');
-const coininfo = require('coininfo');
+const {network, bip44} = require('./network');
+const basePath = `m/49'/` + bip44 + `'/0'/0/`;
 
-let network = coininfo.litecoin.test;
-const basePath = `m/49'/` + network.versions.bip44 + `'/0'/0/`;
-
-network = network.toBitcoinJS();
 console.log(network);
 
 const keys = keypairs(basePath, network);

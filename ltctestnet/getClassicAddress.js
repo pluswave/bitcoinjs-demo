@@ -3,10 +3,9 @@ const keypairs = require('./../common/keypairs');
 const btcjs = require('bitcoinjs-lib');
 const coininfo = require('coininfo');
 
-let network = coininfo.litecoin.test;
-const basePath = `m/44'/` + network.versions.bip44 + `'/0'/0/`;
+const {network, bip44} = require('./network');
+const basePath = `m/44'/` + bip44 + `'/0'/0/`;
 
-network = network.toBitcoinJS();
 console.log(network);
 
 const keys = keypairs(basePath, network);

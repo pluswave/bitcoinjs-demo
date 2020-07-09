@@ -5,7 +5,7 @@ const btcjs = require('bitcoinjs-lib');
 const fingerPrint = require('../common/mnemonic').masterNodeFingerPrint;
 const addressesNs = require('./getNativeSegwitAddress').addresses;
 
-const coininfo = require('coininfo');
+const {network} = require('./network');
 
 const utxo = {
     txid : 'f8b5fcdcf5c9364e15f77cba017c15e3fe3413a795ba9103229acab56a930c0e',
@@ -13,8 +13,6 @@ const utxo = {
     vout_index : 0,
     value: 998000,
 }
-
-const network = coininfo.litecoin.test.toBitcoinJS();
 
 const psbt = new btcjs.Psbt({
     network

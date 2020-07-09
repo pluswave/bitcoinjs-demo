@@ -4,8 +4,7 @@ const {keypairs, addresses } = require('./getP2shSegwitAddress');
 const btcjs = require('bitcoinjs-lib');
 const fingerPrint = require('../common/mnemonic').masterNodeFingerPrint;
 
-const coininfo = require('coininfo');
-const network = coininfo.litecoin.test.toBitcoinJS();
+const {network} = require('./network');
 
 const utxo = {
     txid : 'f89a35cc4856afa7a75dcb40ccec6bae907a10689f49a0cab6344fa8c7dc9d6e',

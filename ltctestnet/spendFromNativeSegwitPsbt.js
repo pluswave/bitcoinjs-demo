@@ -3,7 +3,7 @@
 const {keypairs, addresses} = require('./getNativeSegwitAddress');
 const btcjs = require('bitcoinjs-lib');
 const fingerPrint = require('../common/mnemonic').masterNodeFingerPrint;
-const coininfo = require('coininfo');
+const {network} = require('./network');
 
 
 const utxo = {
@@ -11,8 +11,6 @@ const utxo = {
     vout_index : 0,
     value: 993000,
 }
-
-const network = coininfo.litecoin.test.toBitcoinJS();
 
 const pay1 = btcjs.payments.p2wpkh({pubkey: keypairs[0].publicKey, network});
 

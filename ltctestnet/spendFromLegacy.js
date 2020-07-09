@@ -4,7 +4,7 @@ const {keypairs, addresses } = require('./getClassicAddress');
 const btcjs = require('bitcoinjs-lib');
 const fingerPrint = require('../common/mnemonic').masterNodeFingerPrint;
 
-const coininfo = require('coininfo');
+const {network} = require('./network');
 
 
 const utxo = {
@@ -14,7 +14,6 @@ const utxo = {
     value: 1000000,
 }
 
-const network = coininfo.litecoin.test.toBitcoinJS();
 
 const psbt = new btcjs.Psbt({
     network: network
