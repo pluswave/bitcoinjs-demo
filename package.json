@@ -11,6 +11,7 @@
   "dependencies": {
     "bchaddrjs": "^0.2.2",
     "bip39": "^2.5.0",
+    "bitcoinforksjs-lib": "git+https://github.com/junderw/bitcoinjs-lib.git#cashv5",
     "bitcoinjs-lib": "^5.1.7",
     "coininfo": "^5.1.0",
     "superagent": "^4.0.0-beta.5"
